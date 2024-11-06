@@ -29,12 +29,13 @@
 
   body {
     font-family: var(--ff-sans);
+    background-color: var(--background-primary);
   }
   
 #container {
   display: flex ;
   flex-direction: column;
-  width: 631px;
+  max-width: 631px;
   height: 606;
   margin:auto;
   margin-top: 62px;
@@ -49,26 +50,42 @@ header {
   margin-right: auto;
 }
 
+#div3 {
+  display: flex;
+  align-items: center;
+}
+
 h1 {
   margin-top: 16px;
 }
 
-.barra {
+#barra {
   border-color: var(--border-primary);
   border-style:  solid;
-  border-radius: 8px;
-  width: 451px;
+  border-radius: 12px;
+  flex-grow: 1;
   height: 44px;
   margin-top: 42px;
   margin-right: 12px;
   font-family: "Inter", sans-serif;
+  margin-bottom: 42px;
   
 }
-.barra::placeholder{
-color: var(--content-tertiary);
+
+#barra:hover {
+  border-color: var(--border-secondary);
 }
 
-.botao1 {
+#barra::placeholder{
+color: var(--border-secondary);
+}
+
+#barra:focus {
+  border-color: var(--color-brand);
+  outline: none;
+}
+
+button {
   border:none;
   border-radius: 12px;
   border-color: var(--color-brand);
@@ -80,9 +97,85 @@ color: var(--content-tertiary);
   
 } 
 
-.botao1:hover {
+button:hover {
   background-color: var(--color-brand-hover);
 }
+
+ul{
+  padding: 0;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+li {
+display: flex;
+align-items: center;
+margin-top: 12px;
+padding-top: 16px;
+padding-bottom: 16px;
+list-style-type: none;
+border-radius: 12px;
+background-color: var(--background-secondary);
+padding-left: 20px;
+padding-right: 20px;
+justify-content: space-between; /* Espaça os itens uniformemente */
+
+}
+
+.text {
+  flex-grow: 1;
+}
+
+.check-box {
+  appearance: none; /* Remove a aparência padrão da checkbox */
+  max-width: 16px; /* Tamanho personalizado */
+  max-height: 16px; /* Tamanho personalizado */
+  min-width: 16px; /* Tamanho personalizado */
+  min-height: 16px;
+  border: 2px solid #ccc; /* Cor da borda */
+  border-radius: 4px; /* Bordas arredondas */
+  background-color: #fff; /* Cor de fundo */
+  margin-right: 20px; /* Aumenta o espaço entre a checkbox e o texto */
+  position: relative; /* Necessário para posicionar o "check" */
+  cursor: pointer;
+
+}
+
+
+.check-box:hover{
+  border-color: var(--border-secondary);
+}
+
+.check-box:checked{
+  background-color: var(--color-brand);
+  border: none;
+
+}
+.check-box:checked::after {
+  content: '✓'; /* Adiciona um símbolo de check */
+  position: absolute; /* Permite que o símbolo seja posicionado */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  color: #ffffff; /* Cor do símbolo (branco) */
+  font-size: 16px; /* Tamanho do símbolo */
+  transform: translate(-50%, -50%); /* Centraliza o símbolo no checkbox */
+  pointer-events: none; /* Impede que o "check" interfira na interação com a checkbox */
+}
+
+
+.delete-icon {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 20px; /* Tamanho do ícone */
+   /* Espaçamento entre o texto e o ícone */
+  
+}
+
+.delete-icon:hover {
+  color: #c0392b; /* Cor mais escura ao passar o mouse */
+}
+
 
 
 
