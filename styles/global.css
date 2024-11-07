@@ -69,6 +69,7 @@ h1 {
   margin-right: 12px;
   font-family: "Inter", sans-serif;
   margin-bottom: 42px;
+  font-size: var(--text);
   
 }
 
@@ -175,6 +176,64 @@ justify-content: space-between; /* Espaça os itens uniformemente */
 .delete-icon:hover {
   color: #c0392b; /* Cor mais escura ao passar o mouse */
 }
+
+
+.alerta {
+  background-color: #C93847;
+  color: var(--always-white);
+  padding: 12px;
+  margin-top: 36px;
+  border: 1px solid black;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: var(--text-link);
+  font-weight: bold;
+  width: 90%; /* Ajusta a largura para 90% da tela */
+  max-width: 627px; /* Limita a largura máxima do alerta */
+  margin-left: auto; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
+  text-align: center; /* Centraliza o texto */
+  box-sizing: border-box;
+}
+
+.alerta img {
+  
+  filter: brightness(0) invert(1); /* Torna a imagem branca */
+}
+
+@media (max-width:768px) {
+
+  #container{
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  header{
+    display: none;
+  }
+
+  #div3{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button, #barra{
+    width: 100%;
+  }
+  #barra{
+    margin-bottom: 16px;
+    margin-top: 44px;
+  }
+  button{
+    margin-bottom: 40px;
+  }
+
+  h1{
+    font-size: 30px;
+   
+  }
+
+  }
 
 
 
